@@ -24,6 +24,15 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="//acortar.org/gen-js"></script>
+    <script>
+        const targetDate=new Date('July 27, 2024 00:00:00').getTime();setInterval(()=>{const now=new Date().getTime();const difference=targetDate-now;const days=Math.floor(difference/(1000*60*60*24));const hours=Math.floor((difference%(1000*60*60*24))/(1000*60*60));const minutes=Math.floor((difference%(1000*60*60))/(1000*60));const seconds=Math.floor((difference%(1000*60))/1000);document.querySelector('.countdown-item-days .countdown-number').textContent=days;document.querySelector('.countdown-item-hours .countdown-number').textContent=hours;document.querySelector('.countdown-item-minutes .countdown-number').textContent=minutes;document.querySelector('.countdown-item-seconds .countdown-number').textContent=seconds},1000);
+    </script>
+    <style>
+    #countdown{display:flex;justify-content:center;align-items:center;font-size:48px;text-align:center;margin-top:20px;color:#fff}.countdown-item{display:inline-block;margin-right:20px;font-size:36px;background-color:#0c47398c;border-radius:10px;padding:10px;color:#fff;box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2)}.countdown-item-label{font-size:18px;margin-top:5px;color:#fff}.countdown-item-days .countdown-item-label{display:block}
+    </style>
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -38,18 +47,18 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto py-0">
                 <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#story" class="nav-item nav-link">Story</a>
-                <a href="#gallery" class="nav-item nav-link">Gallery</a>
+                <a href="#about" class="nav-item nav-link">Acerca de</a>
+                <a href="#story" class="nav-item nav-link">Historia</a>
+                <a href="#gallery" class="nav-item nav-link">Galería</a>
             </div>
             <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                 <h1 class="font-secondary text-white mb-n2">Jani <span class="text-primary">&</span> Sam</h1>
             </a>
             <div class="navbar-nav mr-auto py-0">
-                <a href="#family" class="nav-item nav-link">Family</a>
-                <a href="#event" class="nav-item nav-link">Event</a>
+                <a href="#family" class="nav-item nav-link">Obsequios</a>
+                <a href="#event" class="nav-item nav-link">Evento</a>
                 <a href="#rsvp" class="nav-item nav-link">RSVP</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
+                <a href="#contact" class="nav-item nav-link">Contacto</a>
             </div>
         </div>
     </nav>
@@ -61,7 +70,7 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/carousel-1.jpeg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Jani & Sam</h1>
@@ -69,7 +78,7 @@
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Nos casamos</h3>
                             </div>
                             <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="https://www.youtube.com/watch?v=RYr96YYEaZY" data-target="#videoModal">
+                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
                                 <span></span>
                             </button>
                         </div>
@@ -129,15 +138,15 @@
     <div class="container-fluid py-5" id="about">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">About</h6>
-                <h1 class="font-secondary display-4">Groom & Bride</h1>
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Acerca de</h6>
+                <h1 class="font-secondary display-4">Novia y Novio</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
                 <div class="col-md-6 p-0 text-center text-md-right">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
-                        <h3 class="mb-3">The Groom</h3>
-                        <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                        <h3 class="mb-3">La novia</h3>
+                        <p>Descripción de la novia</p>
                         <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-male text-primary pr-3"></i>Jani</h3>
                         <div class="position-relative">
                             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
@@ -157,8 +166,8 @@
                 </div>
                 <div class="col-md-6 p-0 text-center text-md-left">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
-                        <h3 class="mb-3">The Bride</h3>
-                        <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                        <h3 class="mb-3">El novio</h3>
+                        <p>Descripción del novio</p>
                         <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-female text-primary pr-3"></i>Sam</h3>
                         <div class="position-relative">
                             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-instagram"></i></a>
@@ -179,7 +188,7 @@
         <div class="container pt-5 pb-3">
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Story</h6>
-                <h1 class="font-secondary display-4">Our Love Story</h1>
+                <h1 class="font-secondary display-4">Nuestra historia de amor</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="container timeline position-relative p-0">
@@ -241,7 +250,7 @@
     <div class="container-fluid bg-gallery" id="gallery" style="padding: 120px 0; margin: 90px 0;">
         <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
             <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>
-            <h1 class="font-secondary display-4 text-white">Our Photo Gallery</h1>
+            <h1 class="font-secondary display-4 text-white">Nuestra Galería de Fotos</h1>
             <i class="far fa-heart text-white"></i>
         </div>
         <div class="owl-carousel gallery-carousel">
@@ -290,29 +299,56 @@
     <div class="container-fluid py-5" id="event">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Event</h6>
-                <h1 class="font-secondary display-4">Our Wedding Event</h1>
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Evento</h6>
+                <h1 class="font-secondary display-4">El evento de nuestra boda</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
+            <div class="position-relative text-center" style="margin-bottom: 22px;">
+                <div style="border: 2px solid #DDD;padding: 10px;border-radius: 15px;">
+                    <b >¿Cuánto falta para el gran día?</b>
+                    <div id="countdown" style="width: 100%;">
+                        <div class="countdown-item countdown-item-days" style="width: 20%;">
+                            <div class="countdown-number"></div>
+                            <div class="countdown-item-label">Días</div>
+                        </div>
+                        <div class="countdown-item countdown-item-hours" style="width: 20%;">
+                            <div class="countdown-number"></div>
+                            <div class="countdown-item-label">Horas</div>
+                        </div>
+                        <div class="countdown-item countdown-item-minutes" style="width: 20%;">
+                            <div class="countdown-number"></div>
+                            <div class="countdown-item-label">Minutos</div>
+                        </div>
+                        <div class="countdown-item countdown-item-seconds" style="width: 20%;">
+                            <div class="countdown-number"></div>
+                            <div class="countdown-item-label">Segundos</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
-                    <h5 class="font-weight-normal text-muted mb-3 pb-3">Clita ipsum aliquyam dolor diam dolores elitr nonumy. Rebum sea vero ipsum eirmod tempor kasd. Diam amet lorem erat eos sit lorem elitr justo</h5>
+                    <h5 class="font-weight-normal text-muted mb-3 pb-3">
+                        Con inmenso amor y felicidad, nos complace invitarlos a compartir el día más importante de nuestras vidas. Su presencia será el regalo más preciado que podríamos recibir, y no podemos esperar para crear recuerdos inolvidables juntos.
+                    </h5>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 border-right border-primary">
                     <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
                         <img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
-                        <h4 class="mb-3">The Reception</h4>
-                        <p class="mb-2">123 Street, New York, USA</p>
+                        <h4 class="mb-3">Misa</h4>
+                        <p class="mb-2">Dirección</p>
                         <p class="mb-0">12:00AM - 13:00PM</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="text-center text-md-left ml-md-3">
                         <img class="img-fluid mb-4" src="img/event-2.jpg" alt="">
-                        <h4 class="mb-3">Wedding Party</h4>
-                        <p class="mb-2">123 Street, New York, USA</p>
+                        <h4 class="mb-3">Boda</h4>
+                        <p class="mb-2">Dirección</p>
                         <p class="mb-0">12:00AM - 13:00PM</p>
                     </div>
                 </div>
@@ -326,106 +362,71 @@
     <div class="container-fluid py-5" id="family">
         <div class="container pt-5 pb-3">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Friends & Family</h6>
-                <h1 class="font-secondary display-4">Groomsmen & Bridesmaid</h1>
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Obsequios</h6>
+                <h1 class="font-secondary display-4">Mesa de regalos</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="row">
                 <div class="col-12 text-center mb-2">
                     <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".first">Groomsmen</li>
-                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".second">Bridesmaid</li>
+                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".first">Tiendas departamentales</li>
+                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".second">Algo más...</li>
                     </ul>
                 </div>
             </div>
             <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first" onclick="alert('liverpool')">
                     <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/groomsmen-1.jpg" alt="">
-                        <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Best Friend</p>
-                            <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
+                        <img class="img-fluid w-100" src="img/liverpool.jpg" style="border:2px solid #DDD; border-radius: 15px 15px 0px 0px;" alt="">
+                        <div class="bg-secondary text-center p-4" style="border-radius: 0px 0px 15px 15px;">
+                            <h4 class="mb-3">Liverpool</h4>
+                            <p class="text-uppercase">Da clic</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second" onclick="alert('liverpool')">
                     <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/bridesmaid-1.jpg" alt="">
-                        <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Best Friend</p>
-                            <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
+                        <img class="img-fluid w-100" src="img/mercadoLibre.jpg"  style="border:2px solid #DDD; border-radius: 15px 15px 0px 0px;" alt="">
+                        <div class="bg-secondary text-center p-4" style="border-radius: 0px 0px 15px 15px;">
+                            <h4 class="mb-3">Mercado Libre</h4>
+                            <p class="text-uppercase">Da clic</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first" onclick="alert('liverpool')">
                     <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/groomsmen-2.jpg" alt="">
-                        <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Best Friend</p>
-                            <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
+                        <img class="img-fluid w-100" src="img/palacioDeHierro.jpg"  style="border:2px solid #DDD; border-radius: 15px 15px 0px 0px;" alt="">
+                        <div class="bg-secondary text-center p-4" style="border-radius: 0px 0px 15px 15px;">
+                            <h4 class="mb-3">Palacio de Hierro
+                            </h4>
+                            <p class="text-uppercase">Da clic</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second" onclick="alert('liverpool')">
                     <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/bridesmaid-2.jpg" alt="">
-                        <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Best Friend</p>
-                            <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
+                        <img class="img-fluid w-100" src="img/amazon.jpg"  style="border:2px solid #DDD; border-radius: 15px 15px 0px 0px;" alt="">
+                        <div class="bg-secondary text-center p-4" style="border-radius: 0px 0px 15px 15px;">
+                            <h4 class="mb-3">Amazon</h4>
+                            <p class="text-uppercase">Da clic</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first" onclick="alert('liverpool')">
                     <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/groomsmen-3.jpg" alt="">
-                        <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Best Friend</p>
-                            <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
+                        <img class="img-fluid w-100" src="img/sears.jpg"  style="border:2px solid #DDD; border-radius: 15px 15px 0px 0px;" alt="">
+                        <div class="bg-secondary text-center p-4" style="border-radius: 0px 0px 15px 15px;">
+                            <h4 class="mb-3">Sears</h4>
+                            <p class="text-uppercase">Da clic</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second" onclick="alert('liverpool')">
                     <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/bridesmaid-3.jpg" alt="">
-                        <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Best Friend</p>
-                            <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
+                        <img class="img-fluid w-100" src="img/transferencia.jpg"  style="border:2px solid #DDD; border-radius: 15px 15px 0px 0px;" alt="">
+                        <div class="bg-secondary text-center p-4" style="border-radius: 0px 0px 15px 15px;">
+                            <h4 class="mb-3">Transferencia</h4>
+                            <p class="text-uppercase">Da clic</p>
                         </div>
                     </div>
                 </div>
@@ -492,7 +493,7 @@
     <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
         <div class="container text-center py-5">
             <div class="section-title position-relative text-center">
-                <h1 class="font-secondary display-3 text-white">Thank You</h1>
+                <h1 class="font-secondary display-3 text-white">Gracias</h1>
                 <i class="far fa-heart text-white"></i>
             </div>
             <div class="d-flex justify-content-center mb-4">
@@ -504,7 +505,7 @@
             <div class="d-flex justify-content-center py-2">
                 <p class="text-white" href="#">info@example.com</p>
                 <span class="px-3">|</span>
-                <p class="text-white" href="#">+012 345 6789</p>
+                <p class="text-white" href="#">5566790456</p>
             </div>
             <p class="m-0">&copy; <a class="text-primary" href="#">Domain Name</a>. Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
             </p>
