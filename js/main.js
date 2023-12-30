@@ -64,7 +64,12 @@
     $('#portfolio-flters li').on('click', function () {
         $("#portfolio-flters li").removeClass('active');
         $(this).addClass('active');
-        $("#container-mesa").removeAttr("hidden");
+        $("#mesa1").removeAttr("hidden");
+        $("#mesa2").removeAttr("hidden");
+        $("#mesa3").removeAttr("hidden");
+        $("#mesa4").removeAttr("hidden");
+        $("#mesa5").removeAttr("hidden");
+        $("#mesa6").removeAttr("hidden");
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
     
