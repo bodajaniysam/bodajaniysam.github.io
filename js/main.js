@@ -66,18 +66,20 @@ var esPrimeraVez = true;
         layoutMode: 'fitRows'
     });
     $('#portfolio-flters li').on('click', function () {
-        $("#mesa1").removeAttr("hidden");
-        $("#mesa2").removeAttr("hidden");
-        $("#mesa3").removeAttr("hidden");
-        $("#mesa4").removeAttr("hidden");
-        $("#mesa5").removeAttr("hidden");
-        $("#mesa6").removeAttr("hidden");
         $("#portfolio-flters li").removeClass('active');
         $(this).addClass('active');
         portfolioIsotope.isotope({filter: $(this).data('filter')});
         if(esPrimeraVez){
-            $('#portfolio-flters li').click();
             esPrimeraVez=false;
+            const intervalo = setInterval(function() {
+                $("#mesa1").removeAttr("hidden");
+            $("#mesa2").removeAttr("hidden");
+            $("#mesa3").removeAttr("hidden");
+            $("#mesa4").removeAttr("hidden");
+            $("#mesa5").removeAttr("hidden");
+            $("#mesa6").removeAttr("hidden");
+            }, 1000);
+            
         }
         
     });
