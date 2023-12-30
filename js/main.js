@@ -76,7 +76,8 @@ var esPrimeraVez = true;
         $(this).addClass('active');
         portfolioIsotope.isotope({filter: $(this).data('filter')});
         if(esPrimeraVez){
-            $('#portfolio-flters li').click()
+            $('#portfolio-flters li').click();
+            esPrimeraVez=false;
         }
         
     });
