@@ -62,7 +62,6 @@
         layoutMode: 'fitRows'
     });
     $('#portfolio-flters li').on('click', function () {
-        alert("Entra")
         $("#portfolio-flters li").removeClass('active');
         $(this).addClass('active');
         $("#container-mesa").removeAttr("hidden");
