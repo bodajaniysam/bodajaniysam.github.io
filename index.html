@@ -29,7 +29,52 @@
     <script>
         const targetDate=new Date('July 27, 2024 00:00:00').getTime();setInterval(()=>{const now=new Date().getTime();const difference=targetDate-now;const days=Math.floor(difference/(1000*60*60*24));const hours=Math.floor((difference%(1000*60*60*24))/(1000*60*60));const minutes=Math.floor((difference%(1000*60*60))/(1000*60));const seconds=Math.floor((difference%(1000*60))/1000);document.querySelector('.countdown-item-days .countdown-number').textContent=days;document.querySelector('.countdown-item-hours .countdown-number').textContent=hours;document.querySelector('.countdown-item-minutes .countdown-number').textContent=minutes;document.querySelector('.countdown-item-seconds .countdown-number').textContent=seconds},1000);
     </script>
+
     <style>
+        
+
+        #popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #fff;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        }
+
+        #cerrar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        }
+
+        #botonCopiar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            }
+
+            #botonCopiar:hover {
+            background-color: #45a049;
+            }
+
+            #imgBBVA {
+      width: 300px;
+      height: auto;
+      border: 2px solid #DDD;
+      border-radius: 15px;
+      transition: opacity 0.5s ease-in-out; /* Agrega una transición de opacidad */
+    }
+
     #countdown{display:flex;justify-content:center;align-items:center;font-size:48px;text-align:center;margin-top:20px;color:#fff}.countdown-item{display:inline-block;margin-right:20px;font-size:36px;background-color:#0c47398c;border-radius:10px;padding:10px;color:#fff;box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2)}.countdown-item-label{font-size:18px;margin-top:5px;color:#fff}.countdown-item-days .countdown-item-label{display:block}
     </style>
 
@@ -429,9 +474,9 @@
                         <img class="img-fluid w-100" src="img/sears.jpg"  style="border:2px solid #DDD; border-radius: 15px;" alt="">
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second" onclick="window.location.href = 'https://www.google.com'">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second" onclick="mostrarPopup()">
                     <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/transferencia.jpg"  style="border:2px solid #DDD; border-radius: 15px;" alt="">
+                        <img id="imgBBVA" class="img-fluid w-100" src="img/transferencia.jpg"  style="border:2px solid #DDD; border-radius: 15px;" alt="">
                     </div>
                 </div>
             </div>
@@ -482,6 +527,8 @@
     </div>
     <!-- Footer End -->
 
+      
+
 
     <!-- Scroll to Bottom -->
     <i class="fa fa-2x fa-angle-down scroll-to-bottom" style="font-size: 60px;color:#E47A2E"></i>
@@ -501,6 +548,60 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        function mostrarPopup() {
+            var imagen = document.getElementById('imgBBVA');
+            // Cambiar la fuente de la imagen al hacer clic en el botón
+            if (imagen.src.includes('transferencia.jpg')) {
+                imagen.style.opacity = '0'; // Establecer opacidad a 0
+                setTimeout(function() {
+                    imagen.src = 'img/transferencia_r.jpg'; // Cambia a la segunda imagen
+                    imagen.style.opacity = '1'; // Establecer opacidad a 1 después del cambio
+                }, 500); // Espera 500 milisegundos (igual a la duración de la transición)
+                const intervalo = setInterval(function() {
+                    clearInterval(intervalo);
+                    copiarTexto();
+                }, 700);
+            } else {
+                imagen.style.opacity = '0'; // Establecer opacidad a 0
+                setTimeout(function() {
+                    imagen.src = 'img/transferencia.jpg'; // Cambia a la primera imagen
+                    imagen.style.opacity = '1'; // Establecer opacidad a 1 después del cambio
+                }, 500); // Espera 500 milisegundos (igual a la duración de la transición)
+            }
+        }
+
+
+
+        function cambiarFuente() {
+    var imagen = document.getElementById('miImagen');
+    // Cambiar la fuente de la imagen al hacer clic en el botón
+    if (imagen.src.includes('imagen1.jpg')) {
+      imagen.style.opacity = '0'; // Establecer opacidad a 0
+      setTimeout(function() {
+        imagen.src = 'imagen2.jpg'; // Cambia a la segunda imagen
+        imagen.style.opacity = '1'; // Establecer opacidad a 1 después del cambio
+      }, 500); // Espera 500 milisegundos (igual a la duración de la transición)
+    } else {
+      imagen.style.opacity = '0'; // Establecer opacidad a 0
+      setTimeout(function() {
+        imagen.src = 'imagen1.jpg'; // Cambia a la primera imagen
+        imagen.style.opacity = '1'; // Establecer opacidad a 1 después del cambio
+      }, 500); // Espera 500 milisegundos (igual a la duración de la transición)
+    }
+  }
+
+        function copiarTexto() {
+            var textarea = document.createElement('textarea');
+            textarea.value = "2347264287423942";
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('¡CLABE copiada!');
+        }
+    </script>
 </body>
 
 </html>
