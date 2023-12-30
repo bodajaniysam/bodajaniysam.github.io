@@ -64,7 +64,7 @@
     $('#portfolio-flters li').on('click', function () {
         $("#portfolio-flters li").removeClass('active');
         $(this).addClass('active');
-
+        $("#container-mesa").removeAttr("hidden");
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
     
