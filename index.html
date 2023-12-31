@@ -107,7 +107,7 @@
     </nav>
     <!-- Navbar End -->
 
-    <audio id="song" controls autoplay hidden>
+    <audio id="song" controls autoplay hidden onended="reiniciarReproduccion()">
         <source src="img/song.mp3" type="audio/mp3">
         Tu navegador no soporta el elemento de audio.
       </audio>
@@ -610,6 +610,12 @@
                 } else {
                 audio.pause();
                 }
+            }
+
+            function reiniciarReproduccion() {
+                var audio = document.getElementById('song');
+                audio.currentTime = 0; // Reinicia la reproducción al principio
+                audio.play();
             }
     </script>
 </body>
