@@ -107,6 +107,10 @@
     </nav>
     <!-- Navbar End -->
 
+    <audio id="song" controls autoplay hidden>
+        <source src="img/song.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5 pb-5" id="home">
@@ -120,10 +124,10 @@
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Nos casamos</h3>
                             </div>
-                            <!--<button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="img/pedida.mp4" data-target="#videoModal">
+                            <button type="button" class="btn-play mx-auto" onclick="iniciarAudio()">
                                 <span></span>
-                            </button>-->
+                            </button>
+                            <p style="font-size: .7rem;margin-top: 15px;">Sube el volumen</p>
                         </div>
                     </div>
                 </div>
@@ -135,10 +139,10 @@
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Nos casamos</h3>
                             </div>
-                            <!--<button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="img/pedida.mp4" data-target="#videoModal">
+                            <button type="button" class="btn-play mx-auto" onclick="iniciarAudio()">
                                 <span></span>
-                            </button>-->
+                            </button>
+                            <p style="font-size: .7rem;margin-top: 15px;">Sube el volumen</p>
                         </div>
                     </div>
                 </div>
@@ -598,6 +602,15 @@
             document.body.removeChild(textarea);
             alert('¡CLABE copiada!');
         }
+
+        function iniciarAudio(){
+            var audio = document.getElementById('song');
+                if (audio.paused) {
+                audio.play();
+                } else {
+                audio.pause();
+                }
+            }
     </script>
 </body>
 
